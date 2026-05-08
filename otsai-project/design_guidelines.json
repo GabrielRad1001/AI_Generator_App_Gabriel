@@ -1,0 +1,147 @@
+{
+  "theme": "DARK",
+  "archetype": "Archetype 5 (Jewel & Luxury) blended with Archetype 7 (Electric/Neon) for a Premium AI-Native aesthetic.",
+  "brand": {
+    "name": "OtsAI",
+    "positioning": "An AI that generates anything you ask for. Premium, builder-focused, and slightly futuristic.",
+    "vibe": "Moody, highly polished, sophisticated dark mode driven by deep emeralds and electric mints, rejecting typical SaaS gradients."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Geist, sans-serif",
+      "body": "Geist, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scales": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter font-medium text-[#F4FFF9]",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-medium text-[#F4FFF9]",
+      "h3": "text-2xl tracking-tight font-medium text-[#F4FFF9]",
+      "h4": "text-lg font-medium text-[#F4FFF9]",
+      "body": "text-base leading-relaxed text-[#9EAF9C]",
+      "small": "text-sm text-[#7D8B7A]",
+      "overline": "text-xs uppercase tracking-[0.2em] font-bold text-[#00FFA3]"
+    },
+    "rules": [
+      "No Inter or Roboto.",
+      "Never center-align headings by default; embrace left-alignment and asymmetry.",
+      "Limit heading weights to 'medium' or 'light' for elegance, do not default to black/bold unless for numbers."
+    ]
+  },
+  "colors": {
+    "background": {
+      "base": "#030705",
+      "surface": "#08120B",
+      "surface_elevated": "#0D1D13"
+    },
+    "border": {
+      "default": "#172A1F",
+      "hover": "#264231",
+      "focus": "#00FFA3"
+    },
+    "text": {
+      "primary": "#F4FFF9",
+      "secondary": "#9EAF9C",
+      "muted": "#7D8B7A",
+      "inverse": "#030705"
+    },
+    "brand": {
+      "primary": "#00FFA3",
+      "primary_hover": "#A3E635",
+      "accent": "#0D6E46",
+      "danger": "#EF4444"
+    },
+    "gradients": {
+      "hero_overlay": "bg-gradient-to-r from-[#030705]/90 via-[#030705]/60 to-transparent",
+      "glow": "radial-gradient(circle at center, rgba(0, 255, 163, 0.15) 0%, rgba(3, 7, 5, 0) 70%)"
+    },
+    "rules": [
+      "NO purple or violet gradients.",
+      "NO pure #000000; always use #030705 (deep forest void).",
+      "Colors must meet APCA contrast guidelines."
+    ]
+  },
+  "layout_and_spacing": {
+    "scale": {
+      "container_padding": "p-8 md:p-12 lg:p-16",
+      "section_gap": "gap-24 md:gap-32",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "grids": {
+      "marketing": "grid-cols-1 md:grid-cols-12 gap-8. Use Mode A (Tetris Grid) - asymmetric spanning (e.g., col-span-8 and col-span-4).",
+      "dashboard": "grid-cols-1 lg:grid-cols-4 gap-6. Use Mode B (Control Room Grid) - dense, metric-focused."
+    },
+    "rules": [
+      "Containers with borders MUST have internal padding (e.g., p-6 or p-8) to prevent text collision.",
+      "Embrace negative space. Do not fill 100% of grids perfectly in marketing sections.",
+      "Images must not exceed max-h-[80vh] on mobile devices."
+    ]
+  },
+  "components": {
+    "navigation": {
+      "style": "Glassmorphism: bg-[#030705]/60 backdrop-blur-xl border-b border-[#172A1F].",
+      "behavior": "Sticky (top-0, z-50). Links left-aligned, CTA right-aligned. MUST be visible on desktop."
+    },
+    "buttons": {
+      "primary": "bg-[#00FFA3] text-[#030705] hover:bg-[#A3E635] font-medium px-6 py-3 rounded-none transition-transform hover:-translate-y-1",
+      "secondary": "bg-transparent text-[#F4FFF9] border border-[#172A1F] hover:border-[#00FFA3] hover:text-[#00FFA3] px-6 py-3 rounded-none transition-colors",
+      "ghost": "bg-transparent text-[#9EAF9C] hover:text-[#F4FFF9] hover:bg-[#08120B]"
+    },
+    "cards": {
+      "default": "bg-[#08120B] border border-[#172A1F] p-8 rounded-none transition-all hover:border-[#264231] hover:shadow-lg hover:shadow-[#00FFA3]/5",
+      "generation_output": "bg-[#030705] border border-[#172A1F] p-6 font-mono text-[#9EAF9C]"
+    },
+    "inputs": {
+      "default": "bg-[#030705] border border-[#172A1F] text-[#F4FFF9] placeholder-[#7D8B7A] focus:ring-1 focus:ring-[#00FFA3] focus:border-[#00FFA3] rounded-none px-4 py-3",
+      "textarea": "min-h-[160px] resize-y"
+    },
+    "forms": {
+      "rules": "Use Shadcn customized components. Strip generic Vercel looks. Use sharp edges (rounded-none or max rounded-sm)."
+    }
+  },
+  "animations": {
+    "micro": "Hover lifts (-translate-y-1) on cards, crisp transition-colors (duration-200 ease-out) on interactive elements.",
+    "page": "Subtle opacity and slight Y-axis translation fade-ins (framer-motion).",
+    "rules": "Respect prefers-reduced-motion. Animations must feel mechanical and snappy, not overly bouncy."
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1777789062450-d2c57cb8b15b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbmVvbiUyMGdyZWVuJTIwbGlnaHQlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NzgyMzYzNzN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract neon green glowing waves for the hero background.",
+      "placement": "Behind the hero section with a heavy gradient overlay to ensure text contrast."
+    },
+    "logos": [
+      {
+        "url": "https://images.unsplash.com/photo-1770012977129-19f856a1f935?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjb21wYW55JTIwbG9nbyUyMG1pbmltYWx8ZW58MHx8fHwxNzc4MjM2MzY4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Palantir minimal logo on dark"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1572533717789-543da73adb20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBjb21wYW55JTIwbG9nbyUyMG1pbmltYWx8ZW58MHx8fHwxNzc4MjM2MzY4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Devparc text logo"
+      },
+      {
+        "url": "https://images.pexels.com/photos/26576975/pexels-photo-26576975.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Favour Media logo"
+      }
+    ],
+    "contextual": {
+      "url": "https://images.unsplash.com/photo-1641352742391-f3372f14254b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwb2ZmaWNlJTIwZ3JlZW4lMjBwbGFudCUyMGRhcmt8ZW58MHx8fHwxNzc4MjM2MzczfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist dark green potted plant, good for profile or about section accents."
+    }
+  },
+  "testing": {
+    "rules": "All interactive and key informational elements MUST include a 'data-testid' attribute in kebab-case."
+  },
+  "page_level_instructions": {
+    "landing_page": "Hero must use 'hero_background' with heavy left-alignment. Generous padding. Features grid must be asymmetric.",
+    "dashboard": "Bento-style Control Room grid. Include a high-contrast 'Credit Balance' card. Sidebar or topnav must use glassmorphism.",
+    "generation_workspace": "Model selector dropdown (GPT-5.2 / Claude / Gemini). Large prompt input. Output panel uses JetBrains Mono with absolute precision.",
+    "admin_panel": "Dense data tables (Shadcn customized). Include 'Credit Adjustment Modal' and Audit Logs. Minimal padding in data rows for high density."
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the dark green color palette. Avoid generic blues or purples entirely.",
+    "Implement lucide-react or phosphor-icons.",
+    "Ensure all Shadcn components (buttons, inputs, cards, dialogs, tables) are overridden to match the sharp, minimal, rounded-none or max rounded-sm borders as defined.",
+    "NEVER use placeholder text or generic fake image URLs. Use the provided media URLs exclusively.",
+    "Apply data-testid to every button, form, input, and interactive link."
+  ]
+}

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  background: #030705;
+}
+
+body {
+  margin: 0;
+  font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  color: #F4FFF9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #030705;
+}
+
+::selection { background: #00FFA3; color: #030705; }
+
+/* Subtle grain overlay layer */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* Hide scrollbar styling for dark theme */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #030705; }
+::-webkit-scrollbar-thumb { background: #172A1F; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #264231; }
+
+/* Glow utility */
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(0, 255, 163, 0.2), 0 0 32px rgba(0, 255, 163, 0.12);
+}
+
+.text-balance { text-wrap: balance; }
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #172A1F 30%, #172A1F 70%, transparent);
+}
+
+@keyframes ots-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: "▌";
+  margin-left: 2px;
+  color: #00FFA3;
+  animation: ots-cursor 1s steps(1) infinite;
+}
