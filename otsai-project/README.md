@@ -159,8 +159,4 @@ See `memory/LAUNCH_CHECKLIST.md` for the full list. Critical items:
 
 ## 📜 License
 
-Private — © Gabriel / OtsAI Labs, 2026.
-
----
-
-Built with [Emergent](https://emergent.sh) — modular, AI-native, production-ready from day one.
+Private — © Gabriel / OtsAI by Gabriel, 2026.
